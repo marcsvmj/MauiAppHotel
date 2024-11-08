@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Sobre"
+             Title="Sobre"
+             BackgroundColor="AliceBlue"
+             BackgroundImageSource="dotnet_city.png" >
+    
+    <VerticalStackLayout
+        VerticalOptions="CenterAndExpand"
+        Spacing="5">
+
+        <Label 
+            Grid.Row="0" Grid.Column="0"
+            Text="Desenvolvido por:"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontFamily="DanceFont"
+            FontAttributes="Bold"
+            FontSize="30"
+            TextColor="LightGray"/>
+
+        <Label
+            Grid.Row="0" Grid.Column="1"
+            Text="Marcos Vinicius Melo de Jesus"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontFamily="DanceFont"
+            FontAttributes="Bold"
+            FontSize="20"
+            TextColor="LightGray"/>
+
+        <Label />
+
+        <Label
+                Grid.Row="1" Grid.Column="0"
+                Text="Data de Desenvolvimento:"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                FontFamily="DanceFont"
+                FontAttributes="Bold"
+                FontSize="25"
+                TextColor="LightGray"/>
+
+        <Label
+            Grid.Row="1" Grid.Column="1"
+            Text="02/11/2024"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            FontFamily="DanceFont"
+            FontAttributes="Bold"
+            FontSize="20"
+            TextColor="LightGray"/>
+
+        <Label
+                Margin="10"
+                Grid.Row="1" Grid.Column="1"
+                Text="Sobre a Cyrion"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                FontFamily="DanceFont"
+                FontAttributes="Bold"
+                FontSize="30"
+                TextColor="LightGray"/>
+
+        <Label
+                Grid.Row="1" Grid.Column="1"
+                Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum volutpat ac turpis eget sodales. Nulla a metus sapien. Integer dictum libero justo, nec scelerisque diam euismod vel. Nullam id felis ultricies, tincidunt lacus ut, convallis tellus. Proin ipsum lorem, aliquet ut metus id, faucibus accumsan diam. Maecenas lacinia, lorem sit amet commodo laoreet, libero eros vestibulum lacus, pulvinar venenatis lacus sapien a nibh. Nunc vel nunc condimentum, tristique massa eget, luctus leo."
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                FontFamily="DanceFont"
+                FontAttributes="Bold"
+                FontSize="20"
+                TextColor="LightGray"/>
+
+        <Button x:Name="btFindMe"
+                Padding="1"
+                Text="Find me"
+                FontSize="15"
+                TextColor="LightGray"
+                BorderColor="LightGray"
+                BorderWidth="1"
+                BackgroundColor="White"
+                Clicked="btFindMe_Clicked" />
+
+    </VerticalStackLayout>
+</ContentPage>

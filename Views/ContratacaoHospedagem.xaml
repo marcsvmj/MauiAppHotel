@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.ContratacaoHospedagem"
+             Title="ContratacaoHospedagem"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource SageGreen}">
+
+    <VerticalStackLayout VerticalOptions="CenterAndExpand"
+                         Padding="10">
+ 
+            <Label 
+            Text="Cyrion - Calculo de Diária"
+            FontFamily="PlayFont"
+            FontSize="27"
+            TextDecorations="Underline"
+            TextColor="{StaticResource DarkBrown}"/>
+
+        <Frame Padding="10"
+               BorderColor="{StaticResource DarkBrown}"
+               BackgroundColor="{StaticResource LightBrown}"
+               HasShadow="True" >
+            <VerticalStackLayout>
+                <Grid RowDefinitions="Auto, Auto"
+                      ColumnSpacing="10"
+                      ColumnDefinitions="*, *, 2*">
+
+                    <Label Grid.Row="0" Grid.Column="0"
+                           Text="Adultos:" />
+
+                    <Label Grid.Row="0" Grid.Column="1"
+                           Text="{Binding Value}" 
+                           BindingContext="{x:Reference stp_adultos}" />
+
+                    <Stepper Grid.Row="0" Grid.Column="2"
+                             x:Name="stp_adultos"
+                             Minimum="0"
+                             Maximum="10"
+                             Increment="1" />
+
+                    <Label Grid.Row="1" Grid.Column="0"
+                           Text="Crianças:" />
+
+                    <Label Grid.Row="1" Grid.Column="1"
+                           Text="{Binding Value}"
+                           BindingContext="{x:Reference stp_adultos2}" />
+
+                    <Stepper Grid.Row="1" Grid.Column="2"
+                             x:Name="stp_adultos2"
+                             Minimum="0"
+                             Maximum="10"
+                             Increment="1" />
+                </Grid>
+
+                <Label Text="Escolha sua Suíte" />
+
+                <Picker x:Name="pck_quarto"
+                        Title="Selecione sua acomodação" 
+                        TitleColor="{StaticResource Black}"
+                    />
+
+                <Frame Padding="10"
+                       Margin="10"
+                       BackgroundColor="{StaticResource LightBrown}"
+                       BorderColor="{StaticResource DarkBrown}">
+                    <VerticalStackLayout VerticalOptions="CenterAndExpand"
+                                         Spacing="20"
+                                         Padding="10">
+                        <Label Text="Péríodo da Estadia" />
+
+                        <HorizontalStackLayout>
+                            <Label Text="Check-in" />
+                            <DatePicker x:Name="dtpck_checkin"
+                                        Format="dd/MM/yyyy" />
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout>
+                            <Label Text="Check-out" />
+                            <DatePicker x:Name="dtpck_checkout"
+                                        Format="dd/MM/yyyy" />
+                        </HorizontalStackLayout>
+
+                    </VerticalStackLayout>
+                </Frame>
+
+                <HorizontalStackLayout
+                    HorizontalOptions="CenterAndExpand"
+                    Spacing="10">
+                    <Button 
+                        x:Name="btConfirmar"
+                        Text="Confirmar"
+                        Padding="1"
+                        TextColor="{StaticResource LightBrown}"
+                        BackgroundColor="{StaticResource DarkBrown}"
+                        Clicked="btConfirmar_Clicked"/>
+
+                    <Button x:Name="btSobre"
+                        Text="Sobre Nós"
+                        Padding="10"
+                        TextColor="{StaticResource LightBrown}"
+                        BackgroundColor="{StaticResource DarkBrown}"
+                        Clicked="btSobre_Clicked" />
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+        </Frame>
+        </VerticalStackLayout>
+</ContentPage>
